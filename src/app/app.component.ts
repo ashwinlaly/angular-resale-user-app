@@ -1,6 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { UserService } from './service/user.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,23 +7,7 @@ import { UserService } from './service/user.service';
 })
 
 export class AppComponent {
-  title = 'Resale';
-  loggedin : Boolean = false;
 
-  constructor (private user$ : UserService, private router : Router) {
-
-  }
-
-  ngOnInit(){
-    this.user$.loggedIn.next((localStorage.getItem('loggedin') == '1') ? true : false);
-    this.user$.loggedIn.subscribe(res =>{
-      this.loggedin = res;
-    });
-  }
-
-  logout(){
-    this.router.navigateByUrl('/signin');
-    this.user$.loggedIn.next(false);
-  }
+  constructor () { }
 
 }

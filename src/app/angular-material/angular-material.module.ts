@@ -9,10 +9,14 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar'
+import { MatSidenavModule} from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   imports: [
     CommonModule,
+    MatSidenavModule,
+    MatListModule,
     MatButtonModule,
     MatCardModule,
     MatMenuModule,
@@ -24,6 +28,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar'
     MatSnackBarModule
   ],
   exports : [
+    MatSidenavModule,
+    MatListModule,
     MatButtonModule,
     MatCardModule,
     MatMenuModule,

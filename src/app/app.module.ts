@@ -3,23 +3,22 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpModule } from '@angular/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LayoutModule } from '@angular/cdk/layout';
 
+import { AppComponent } from './app.component';
+import { HomeNavComponent } from './home-nav/home-nav.component';
+import { LoginComponent } from './home/login/login.component';
+import { SignupComponent } from './home/signup/signup.component';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { RoutingModuleModule } from './routing-module/routing-module.module';
 import { ResaleModule } from './resale/resale.module';
 
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeNavComponent } from './home-nav/home-nav.component';
-import { LayoutModule } from '@angular/cdk/layout';
-
-import { AngularMaterialModule } from './angular-material.module';
-import { ApplicationRoutingModule } from './application-routing.module';
-
 @NgModule({
   declarations: [
     AppComponent,
-    HomeNavComponent
+    HomeNavComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +28,8 @@ import { ApplicationRoutingModule } from './application-routing.module';
     FormsModule,
     HttpModule,
     AngularMaterialModule,
-    ApplicationRoutingModule,
-	RoutingModuleModule,
-	ResaleModule
+	  RoutingModuleModule,
+	  ResaleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
