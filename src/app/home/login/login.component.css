@@ -25,3 +25,15 @@ button {
 .error {
     color: red;
 }
+
+@media only screen and (max-width: 600px) {
+    mat-card {
+        height: 90%;
+        width: 90%;
+        left: 50%;
+        top: 55%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        zoom: 100%;
+    }
+  }
